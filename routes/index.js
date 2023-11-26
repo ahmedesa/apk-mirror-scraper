@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const apkRouter = require("./apk.route");
+const versionRouter = require("./version.route");
 
-router.use("/apks", apkRouter);
+router.use("/versions", versionRouter);
 
 module.exports = router;

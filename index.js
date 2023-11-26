@@ -1,8 +1,12 @@
 const express = require('express');
-const dbConnection = require("./config/db");
-const app = express();
-const port = process.env.PORT || 3000;
+const bodyParser = require('body-parser');
 const routers = require("./routes/");
+const dbConnection = require("./config/db");
+
+const port = process.env.PORT || 3000;
+const app = express();
+
+app.use(bodyParser.json());
 
 dbConnection();
 
